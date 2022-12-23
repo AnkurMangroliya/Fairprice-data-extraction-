@@ -77,10 +77,6 @@ for kl,i in enumerate(mai):
                                         Net = soup2.find('span',class_="sc-1bsd7ul-1 sc-13n2dsm-13 gDxsDx liuneL").text
                                     except:
                                         Net='None'
-                                    # try:
-                                    #     Country_origin = soup2.find('span',class_="sc-1bsd7ul-1 sc-3zvnd-10 kEUDke hpuhl").text
-                                    # except:
-                                    #     Country_origin="None"
                                     images = soup2.find_all('li',class_="sc-10zw1uf-14")
                                     img1='None'
                                     img2='None'
@@ -110,11 +106,6 @@ for kl,i in enumerate(mai):
                                     Fairprice_data.append(fair_price_data)
                                     print(name)
 
-                                    with open('Fairprice_data_1.csv','a') as f:
+                                    with open('Fairprice_data.csv','a') as f:
                                         df = pd.DataFrame(Fairprice_data)
-                                        df.to_csv('Fair_price_data_1.csv')
-                                        
-                
-# df = pd.DataFrame(Fairprice_data)
-# df.to_csv('Fair_price_data.csv')
-
+                                        df.to_csv('Fair_price_data.csv')                                                 
